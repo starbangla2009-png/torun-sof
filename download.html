@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>Download</title>
+<style>
+body{font-family:Arial;text-align:center;padding:40px}
+a{display:inline-block;padding:15px 25px;background:green;color:white;text-decoration:none;border-radius:5px}
+</style>
+</head>
+<body>
+
+<h1>Download Your Product</h1>
+<div id="link"></div>
+
+<script>
+const links = {
+  A: "PASTE_GOOGLE_DRIVE_LINK_A",
+  B: "PASTE_GOOGLE_DRIVE_LINK_B"
+};
+
+const params = new URLSearchParams(window.location.search);
+const product = params.get("product");
+
+if(links[product]){
+  document.getElementById("link").innerHTML =
+    `<a href="${links[product]}" target="_blank">Download Now</a>`;
+}else{
+  document.getElementById("link").innerHTML = "Invalid Product";
+}
+</script>
+
+</body>
+</html>
