@@ -4,18 +4,52 @@
 <meta charset="UTF-8">
 <title>TORUN SOF</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body{font-family:Arial;background:#f4f4f4}
-header{background:#e2136e;color:#fff;padding:20px;text-align:center}
-.card{background:#fff;margin:15px;padding:20px;border-radius:10px}
-button{background:#e2136e;color:#fff;border:none;padding:12px;width:100%;font-size:16px;border-radius:5px}
+body{
+  font-family: Arial;
+  background:#f4f4f4;
+  margin:0;
+}
+
+header{
+  background:#e2136e;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+.products{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+  padding:20px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+}
+
+button{
+  background:#e2136e;
+  color:white;
+  border:none;
+  padding:12px;
+  width:100%;
+  font-size:16px;
+  border-radius:5px;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>TORUN SOF</h1>
-<p>bKash Number: <b>01611039105</b></p>
+  <h1>TORUN SOF</h1>
+  <p>bKash Number: <b>01611039105</b></p>
 </header>
 
 <div class="products">
@@ -23,38 +57,3 @@ button{background:#e2136e;color:#fff;border:none;padding:12px;width:100%;font-si
   <div class="card">
     <h2>Product A</h2>
     <p>Price: ৳500</p>
-    <button>Buy Now</button>
-  </div>
-
-  <div class="card">
-    <h2>Product B</h2>
-    <p>Price: ৳800</p>
-    <button>Buy Now</button>
-  </div>
-
-  <div class="card">
-    <h2>Product C</h2>
-    <p>Price: ৳650</p>
-    <button>Buy Now</button>
-  </div>
-
-</div>
-
-<script>
-function buy(product, price){
-  var name = prompt("আপনার নাম লিখুন");
-  var trx  = prompt("bKash Transaction ID লিখুন");
-
-  if(!name || !trx){
-    alert("সব তথ্য দিন");
-    return;
-  }
-
-  var msg = `Order%0AName: ${name}%0AProduct: ${product}%0APrice: ${price}Tk%0ATrxID: ${trx}`;
-  window.open("https://wa.me/8801611039105?text="+msg,"_blank");
-  window.location.href = "download.html?product=" + product;
-}
-</script>
-
-</body>
-</html>
