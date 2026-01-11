@@ -1,130 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>TORUN SOF</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Torun Sof Store</title>
 
 <style>
 body{
-  margin:0;
   font-family:Arial;
-  background:#f2f2f2;
 }
-header{
-  background:#e0116b;
-  color:white;
-  text-align:center;
-  padding:30px;
-}
+
 .products{
   display:grid;
-  grid-template-columns:repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap:20px;
-  padding:30px;
 }
+
 .card{
-  background:white;
   border-radius:10px;
-  padding:20px;
+  padding:15px;
+  color:white;
   text-align:center;
 }
+
 .card img{
   width:100%;
-  border-radius:8px;
+  height:150px;
+  object-fit:cover;
+  border-radius:10px;
 }
-.red{border-top:6px solid red;}
-.purple{border-top:6px solid purple;}
-.black{border-top:6px solid black;}
-@media(max-width:768px){
-  .products{grid-template-columns:1fr;}
+
+.buy{
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  cursor:pointer;
+  font-size:16px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>TORUN SOF</h1>
-  <p>bKash Number: 01611039105</p>
-</header>
+<h2>Our Products</h2>
 
 <div class="products">
 
 <!-- PRODUCT A -->
-<div class="card red">
-  <img src="https://via.placeholder.com/300x200?text=Product+A">
-  <h2>Product A</h2>
-  <p>Price: ৳500</p>
-
-  <!-- PAYPAL BUTTON A -->
-  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-    <input type="hidden" name="cmd" value="_xclick">
-    <input type="hidden" name="business" value="startorun97@gmail.com
-">
-    <input type="hidden" name="item_name" value="Product A">
-    <input type="hidden" name="amount" value="5">
-    <input type="hidden" name="currency_code" value="USD">
-    <input type="hidden" name="return" value="https://starbangla2009-png.github.io/torun-sof/download.html?product=A">
-    <input type="<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-
-  <input type="hidden" name="cmd" value="_xclick">
-  <input type="hidden" name="business" value="startorun97@gmail.com">
-
-  <input type="hidden" name="item_name" value="Product A"><buy Now 
-</button>
-
-  <input type="hidden" name="amount" value="5">
-  <input type="hidden" name="currency_code" value="USD">
-
-  <input type="hidden" name="return" value="https://starbangla2009-png.github.io/torun-sof/download.html?product=A">
-  <input type="hidden" name="cancel_return" value="https://starbangla2009-png.github.io/torun-sof/">
-
-  <input type="submit" value="Buy Now">
-
-</form>
-">
-  </form>
+<div class="card" style="background:red;">
+  <img src="https://via.placeholder.com/300">
+  <h3>Product A</h3>
+  <button class="buy"
+    onclick="window.location.href='payment.html?product=A'">
+    Buy Now
+  </button>
 </div>
 
-<!-- PRODUCT B --><button onclick="window.location.href='payment.html?product=B'">
-  Buy Now
-</button>
-
-
-<div class="card purple">
-  <img src="https://via.placeholder.com/300x200?text=Product+B">
-  <h2>Product B</h2>
-  <p>Price: ৳800</p>
-
-  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-    <input type="hidden" name="cmd" value="_xclick">
-    <input type="hidden" name="business" value="startorun97@gmail.com
-">
-    <input type="hidden" name="item_name" value="Product B">
-    <input type="hidden" name="amount" value="8">
-    <input type="hidden" name="currency_code" value="USD">
-    <input type="hidden" name="return" value="https://starbangla2009-png.github.io/torun-sof/download.html?product=B">
-    <input type="submit" value="Buy Now">
-  </form>
+<!-- PRODUCT B -->
+<div class="card" style="background:purple;">
+  <img src="https://via.placeholder.com/300">
+  <h3>Product B</h3>
+  <button class="buy"
+    onclick="window.location.href='payment.html?product=B'">
+    Buy Now
+  </button>
 </div>
 
 <!-- PRODUCT C -->
-<div class="card black">
-  <img src="https://via.placeholder.com/300x200?text=Product+C">
-  <h2>Product C</h2>
-  <p>Price: ৳650</p>
+<div class="card" style="background:black;">
+  <img src="https://via.placeholder.com/300">
+  <h3>Product C</h3>
+  <button class="buy"
+    onclick="window.location.href='payment.html?product=C'">
+    Buy Now
+  </button>
+</div>
 
-  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-    <input type="hidden" name="cmd" value="_xclick">
-    <input type="hidden" name="business" value="startorun97@gmail.com
-">
-    <input type="hidden" name="item_name" value="Product C">
-    <input type="hidden" name="amount" value="6.5">
-    <input type="hidden" name="currency_code" value="USD">
-    <input type="hidden" name="return" value="https://starbangla2009-png.github.io/torun-sof/download.html?product=C">
-    <input type="submit" value="Buy Now">
-  </form>
+<!-- PRODUCT D -->
+<div class="card" style="background:green;">
+  <img src="https://via.placeholder.com/300">
+  <h3>Product D</h3>
+  <button class="buy"
+    onclick="window.location.href='payment.html?product=D'">
+    Buy Now
+  </button>
+</div>
+
+<!-- PRODUCT E -->
+<div class="card" style="background:blue;">
+  <img src="https://via.placeholder.com/300">
+  <h3>Product E</h3>
+  <button class="buy"
+    onclick="window.location.href='payment.html?product=E'">
+    Buy Now
+  </button>
+</div>
+
+<!-- PRODUCT F -->
+<div class="card" style="background:orange;">
+  <img src="https://via.placeholder.com/300">
+  <h3>Product F</h3>
+  <button class="buy"
+    onclick="window.location.href='payment.html?product=F'">
+    Buy Now
+  </button>
 </div>
 
 </div>
