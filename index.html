@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>TORUN SOF</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body{margin:0;font-family:Arial;background:#f2f2f2}
-header{background:#e2126f;color:white;padding:30px;text-align:center}
+header{background:#e60073;color:#fff;padding:30px;text-align:center}
 
 .products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-padding:30px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  padding:20px;
 }
 
 .card{
-border-radius:15px;
-padding:20px;
-color:white;
-text-align:center;
+  color:white;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
 }
 
-.card img{width:100%;height:150px;background:#fff;border-radius:10px}
-
-.buy-btn{
-margin-top:15px;
-padding:10px 20px;
-border:none;
-cursor:pointer;
-font-size:16px;
-border-radius:5px;
+.card img{
+  width:100%;
+  height:150px;
+  background:#fff;
+  margin-bottom:15px;
 }
 
 .red{background:red}
@@ -38,62 +37,66 @@ border-radius:5px;
 .blue{background:blue}
 .orange{background:orange}
 
-.buy-btn{background:white;color:black}
+button{
+  padding:10px 20px;
+  border:none;
+  cursor:pointer;
+  font-size:16px;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>TORUN SOF</h1>
-<p>bKash Number: 01611039105</p>
+  <h1>TORUN SOF</h1>
+  <p>bKash: 01611039105</p>
 </header>
 
 <div class="products">
 
 <div class="card red">
-<img>
-<h2>Product A</h2>
-<button class="buy-btn" onclick="go()">Buy Now</button>
+  <img>
+  <h2>Product A</h2>
+  <p>Price: ৳500</p>
+  <a href="payment.html?product=A"><button>Buy Now</button></a>
 </div>
 
 <div class="card purple">
-<img>
-<h2>Product B</h2>
-<button class="buy-btn" onclick="go()">Buy Now</button>
+  <img>
+  <h2>Product B</h2>
+  <p>Price: ৳800</p>
+  <a href="payment.html?product=B"><button>Buy Now</button></a>
 </div>
 
 <div class="card black">
-<img>
-<h2>Product C</h2>
-<button class="buy-btn" onclick="go()">Buy Now</button>
+  <img>
+  <h2>Product C</h2>
+  <p>Price: ৳650</p>
+  <a href="payment.html?product=C"><button>Buy Now</button></a>
 </div>
 
 <div class="card green">
-<img>
-<h2>Product D</h2>
-<button class="buy-btn" onclick="go()">Buy Now</button>
+  <img>
+  <h2>Product D</h2>
+  <p>Price: ৳700</p>
+  <a href="payment.html?product=D"><button>Buy Now</button></a>
 </div>
 
 <div class="card blue">
-<img>
-<h2>Product E</h2>
-<button class="buy-btn" onclick="go()">Buy Now</button>
+  <img>
+  <h2>Product E</h2>
+  <p>Price: ৳900</p>
+  <a href="payment.html?product=E"><button>Buy Now</button></a>
 </div>
 
 <div class="card orange">
-<img>
-<h2>Product F</h2>
-<button class="buy-btn" onclick="go()">Buy Now</button>
+  <img>
+  <h2>Product F</h2>
+  <p>Price: ৳1000</p>
+  <a href="payment.html?product=F"><button>Buy Now</button></a>
 </div>
 
 </div>
-
-<script>
-function go(){
-window.open("https://docs.google.com/forms/d/e/1FAIpQLScoumjD1n2K0Ba5VjPQnXKdvCcWMg_CRZlN8DPknWIa3676cw/viewform","_blank");
-}
-</script>
-
 </body>
 </html>
