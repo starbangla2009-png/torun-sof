@@ -3,49 +3,32 @@
 <head>
 <title>Download</title>
 <style>
-body{
-  text-align:center;
-  font-family:Arial;
-  padding:40px;
-}
-a{
-  background:#28a745;
-  color:white;
-  padding:15px 25px;
-  text-decoration:none;
-  font-size:18px;
-  border-radius:6px;
-  display:inline-block;
-}
+body{text-align:center;font-family:Arial;padding:40px}
+a{display:inline-block;padding:15px 30px;background:green;color:white;text-decoration:none;font-size:18px}
 </style>
 </head>
-
 <body>
 
-<h2>✅ Payment Successful</h2>
-<p>Your download is ready</p>
-
+<h2>Your Download</h2>
 <div id="link"></div>
 
 <script>
-const files = {
-  A: "https://drive.google.com/file/d/1B4ux50cnNOoREjvz4lde_vagDRbF42jO/view?usp=drive_link",
-  B: "PASTE_GOOGLE_DRIVE_LINK_B",
-  C: "PASTE_GOOGLE_DRIVE_LINK_C",
-  D: "PASTE_GOOGLE_DRIVE_LINK_D",
-  E: "PASTE_GOOGLE_DRIVE_LINK_E",
-  F: "PASTE_GOOGLE_DRIVE_LINK_F"
+const files={
+  A:"https://drive.google.com/file/d/AAAA/view",
+  B:"https://drive.google.com/file/d/BBBB/view",
+  C:"https://drive.google.com/file/d/CCCC/view",
+  D:"https://drive.google.com/file/d/DDDD/view",
+  E:"https://drive.google.com/file/d/EEEE/view",
+  F:"https://drive.google.com/file/d/FFFF/view"
 };
 
-const params = new URLSearchParams(window.location.search);
-const product = params.get("product");
+const p=new URLSearchParams(location.search).get("product");
 
-if (files[product]) {
-  document.getElementById("link").innerHTML =
-    `<a href="${files[product]}" target="_blank">Download Now</a>`;
-} else {
-  document.getElementById("link").innerHTML =
-    "❌ Invalid or missing product";
+if(files[p]){
+  document.getElementById("link").innerHTML=
+  `<a href="${files[p]}" target="_blank">Download Now</a>`;
+}else{
+  document.getElementById("link").innerText="Invalid Product";
 }
 </script>
 
