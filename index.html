@@ -1,60 +1,43 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>TORUN SOF</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 body{
-  font-family: Arial;
-  background:#f4f4f4;
   margin:0;
+  font-family:Arial;
+  background:#f2f2f2;
 }
-
 header{
-  background:#e2136e;
+  background:#e0116b;
   color:white;
-  padding:20px;
   text-align:center;
+  padding:30px;
 }
-
 .products{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:repeat(3, 1fr);
   gap:20px;
-  padding:20px;
+  padding:30px;
 }
-
 .card{
+  background:white;
+  border-radius:10px;
   padding:20px;
-  border-radius:12px;
   text-align:center;
-  color:white;
 }
-
 .card img{
   width:100%;
-  height:180px;
-  object-fit:cover;
-  border-radius:10px;
-  margin-bottom:10px;
+  border-radius:8px;
 }
-
-.red{ background:#e53935; }
-.purple{ background:#8e24aa; }
-.black{ background:#212121; }
-
-button{
-  margin-top:10px;
-  background:white;
-  color:black;
-  border:none;
-  padding:12px;
-  width:100%;
-  font-size:16px;
-  border-radius:6px;
-  cursor:pointer;
+.red{border-top:6px solid red;}
+.purple{border-top:6px solid purple;}
+.black{border-top:6px solid black;}
+@media(max-width:768px){
+  .products{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -63,31 +46,62 @@ button{
 
 <header>
   <h1>TORUN SOF</h1>
-  <p>bKash Number: <b>01611039105</b></p>
+  <p>bKash Number: 01611039105</p>
 </header>
 
 <div class="products">
 
-  <div class="card red">
-    <img src="https://via.placeholder.com/300x200.png?text=Product+A">
-    <h2>Product A</h2>
-    <p>Price: ৳500</p>
-    <button>Buy Now</button>
-  </div>
+<!-- PRODUCT A -->
+<div class="card red">
+  <img src="https://via.placeholder.com/300x200?text=Product+A">
+  <h2>Product A</h2>
+  <p>Price: ৳500</p>
 
-  <div class="card purple">
-    <img src="https://via.placeholder.com/300x200.png?text=Product+B">
-    <h2>Product B</h2>
-    <p>Price: ৳800</p>
-    <button>Buy Now</button>
-  </div>
+  <!-- PAYPAL BUTTON A -->
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
+    <input type="hidden" name="item_name" value="Product A">
+    <input type="hidden" name="amount" value="5">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="return" value="https://starbangla2009-png.github.io/torun-sof/download.html?product=A">
+    <input type="submit" value="Buy Now">
+  </form>
+</div>
 
-  <div class="card black">
-    <img src="https://via.placeholder.com/300x200.png?text=Product+C">
-    <h2>Product C</h2>
-    <p>Price: ৳650</p>
-    <button>Buy Now</button>
-  </div>
+<!-- PRODUCT B -->
+<div class="card purple">
+  <img src="https://via.placeholder.com/300x200?text=Product+B">
+  <h2>Product B</h2>
+  <p>Price: ৳800</p>
+
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
+    <input type="hidden" name="item_name" value="Product B">
+    <input type="hidden" name="amount" value="8">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="return" value="https://starbangla2009-png.github.io/torun-sof/download.html?product=B">
+    <input type="submit" value="Buy Now">
+  </form>
+</div>
+
+<!-- PRODUCT C -->
+<div class="card black">
+  <img src="https://via.placeholder.com/300x200?text=Product+C">
+  <h2>Product C</h2>
+  <p>Price: ৳650</p>
+
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
+    <input type="hidden" name="item_name" value="Product C">
+    <input type="hidden" name="amount" value="6.5">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="return" value="https://starbangla2009-png.github.io/torun-sof/download.html?product=C">
+    <input type="submit" value="Buy Now">
+  </form>
+</div>
 
 </div>
 
