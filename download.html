@@ -1,37 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Download</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{font-family:Arial;text-align:center;padding:40px}
-a{display:inline-block;padding:15px 30px;background:green;color:white;text-decoration:none;border-radius:8px}
-</style>
+  <title>Download</title>
 </head>
-
 <body>
 
-<h2>✅ Payment Successful</h2>
-<p>Your download is ready</p>
-
-<div id="link"></div>
-
 <script>
-const files = {
-  A: "startorun97@gmail.com
-",
-  B: "https://drive.google.com/file/d/1hk5yI1xKTlDSKYS7iHxsvdMENASd7R7H/view?usp=drive_link",
-  C: "https://drive.google.com/file/d/1fheFcECHRu32GFyPzK-m6r886-mevIHp/view?usp=drive_link"
+const links = {
+  A: "https://drive.google.com/FILE_A",
+  B: "https://drive.google.com/FILE_B",
+  C: "https://drive.google.com/FILE_C"
 };
 
 const params = new URLSearchParams(window.location.search);
 const product = params.get("product");
 
-if(files[product]){
-  document.getElementById("link").innerHTML =
-    `<a href="${files[product]}">Download Now</a>`;
-}else{
-  document.getElementById("link").innerText = "Invalid product";
+if (links[product]) {
+  window.location.href = links[product];
+} else {
+  document.body.innerHTML = "Invalid Product";
 }
 </script>
 
