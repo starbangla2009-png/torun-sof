@@ -1,112 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Torun Sof Store</title>
-
+<title>TORUN SOF</title>
 <style>
-body{
-  font-family:Arial;
-}
+body{margin:0;font-family:Arial;background:#f2f2f2}
+header{background:#e2126f;color:white;padding:30px;text-align:center}
 
 .products{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding:30px;
 }
 
 .card{
-  border-radius:10px;
-  padding:15px;
-  color:white;
-  text-align:center;
+border-radius:15px;
+padding:20px;
+color:white;
+text-align:center;
 }
 
-.card img{
-  width:100%;
-  height:150px;
-  object-fit:cover;
-  border-radius:10px;
+.card img{width:100%;height:150px;background:#fff;border-radius:10px}
+
+.buy-btn{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+cursor:pointer;
+font-size:16px;
+border-radius:5px;
 }
 
-.buy{
-  margin-top:10px;
-  padding:10px;
-  border:none;
-  cursor:pointer;
-  font-size:16px;
-}
+.red{background:red}
+.purple{background:purple}
+.black{background:black}
+.green{background:green}
+.blue{background:blue}
+.orange{background:orange}
+
+.buy-btn{background:white;color:black}
 </style>
 </head>
 
 <body>
 
-<h2>Our Products</h2>
+<header>
+<h1>TORUN SOF</h1>
+<p>bKash Number: 01611039105</p>
+</header>
 
 <div class="products">
 
-<!-- PRODUCT A -->
-<div class="card" style="background:red;">
-  <img src="https://via.placeholder.com/300">
-  <h3>Product A</h3>
-  <button class="buy-btn"
-onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScoumjD1n2K0Ba5VjPQnXKdvCcWMg_CRZlN8DPknWIa3676cw/viewform','_blank')">
-Buy Now
-</button>
-
+<div class="card red">
+<img>
+<h2>Product A</h2>
+<button class="buy-btn" onclick="go()">Buy Now</button>
 </div>
 
-<!-- PRODUCT B -->
-<div class="card" style="background:purple;">
-  <img src="<img src="img/edius 11.jpg ">
-">
-  <h3>Product B</h3>
-  <button class="buy"
-    onclick="window.location.href='payment.html?product=B'">
-    Buy Now
-  </button>
+<div class="card purple">
+<img>
+<h2>Product B</h2>
+<button class="buy-btn" onclick="go()">Buy Now</button>
 </div>
 
-<!-- PRODUCT C -->
-<div class="card" style="background:black;">
-  <img src="img/a.jpg">
-  <h3>Product C</h3>
-  <button class="buy"
-    onclick="window.location.href='payment.html?product=C'">
-    Buy Now
-  </button>
+<div class="card black">
+<img>
+<h2>Product C</h2>
+<button class="buy-btn" onclick="go()">Buy Now</button>
 </div>
 
-<!-- PRODUCT D -->
-<div class="card" style="background:green;">
-  <img src="https://via.placeholder.com/300">
-  <h3>Product D</h3>
-  <button class="buy"
-    onclick="window.location.href='payment.html?product=D'">
-    Buy Now
-  </button>
+<div class="card green">
+<img>
+<h2>Product D</h2>
+<button class="buy-btn" onclick="go()">Buy Now</button>
 </div>
 
-<!-- PRODUCT E -->
-<div class="card" style="background:blue;">
-  <img src="https://via.placeholder.com/300">
-  <h3>Product E</h3>
-  <button class="buy"
-    onclick="window.location.href='payment.html?product=E'">
-    Buy Now
-  </button>
+<div class="card blue">
+<img>
+<h2>Product E</h2>
+<button class="buy-btn" onclick="go()">Buy Now</button>
 </div>
 
-<!-- PRODUCT F -->
-<div class="card" style="background:orange;">
-  <img src="https://via.placeholder.com/300">
-  <h3>Product F</h3>
-  <button class="buy"
-    onclick="window.location.href='payment.html?product=F'">
-    Buy Now
-  </button>
+<div class="card orange">
+<img>
+<h2>Product F</h2>
+<button class="buy-btn" onclick="go()">Buy Now</button>
 </div>
 
 </div>
+
+<script>
+function go(){
+window.open("https://docs.google.com/forms/d/e/1FAIpQLScoumjD1n2K0Ba5VjPQnXKdvCcWMg_CRZlN8DPknWIa3676cw/viewform","_blank");
+}
+</script>
 
 </body>
 </html>
