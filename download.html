@@ -3,20 +3,51 @@
 <head>
 <title>Download</title>
 <style>
-body{text-align:center;font-family:Arial;padding:40px}
-a{background:#28a745;color:white;padding:15px 25px;
-text-decoration:none;font-size:18px;border-radius:6px}
+body{
+  text-align:center;
+  font-family:Arial;
+  padding:40px;
+}
+a{
+  background:#28a745;
+  color:white;
+  padding:15px 25px;
+  text-decoration:none;
+  font-size:18px;
+  border-radius:6px;
+  display:inline-block;
+}
 </style>
 </head>
 
 <body>
 
 <h2>✅ Payment Successful</h2>
-<p>Click below to download your file</p>
+<p>Your download is ready</p>
 
-<a href="https://drive.google.com/file/d/1B4ux50cnNOoREjvz4lde_vagDRbF42jO/view?usp=drive_link" target="_blank">
-Download Now
-</a>
+<div id="link"></div>
+
+<script>
+const files = {
+  A: "https://drive.google.com/file/d/1B4ux50cnNOoREjvz4lde_vagDRbF42jO/view?usp=drive_link",
+  B: "PASTE_GOOGLE_DRIVE_LINK_B",
+  C: "PASTE_GOOGLE_DRIVE_LINK_C",
+  D: "PASTE_GOOGLE_DRIVE_LINK_D",
+  E: "PASTE_GOOGLE_DRIVE_LINK_E",
+  F: "PASTE_GOOGLE_DRIVE_LINK_F"
+};
+
+const params = new URLSearchParams(window.location.search);
+const product = params.get("product");
+
+if (files[product]) {
+  document.getElementById("link").innerHTML =
+    `<a href="${files[product]}" target="_blank">Download Now</a>`;
+} else {
+  document.getElementById("link").innerHTML =
+    "❌ Invalid or missing product";
+}
+</script>
 
 </body>
 </html>
