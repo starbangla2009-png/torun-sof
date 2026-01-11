@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html>
 <head>
-<meta charset="UTF-8">
 <title>Download</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body{font-family:Arial;text-align:center;padding:40px}
-a{display:inline-block;padding:15px 25px;background:green;color:white;text-decoration:none;border-radius:5px}
+a{display:inline-block;padding:15px 30px;background:green;color:white;text-decoration:none;border-radius:8px}
 </style>
 </head>
+
 <body>
 
-<h1>Download Your Product</h1>
+<h2>✅ Payment Successful</h2>
+<p>Your download is ready</p>
+
 <div id="link"></div>
 
 <script>
-const links = {
-  A: "https://drive.google.com/file/d/1fheFcECHRu32GFyPzK-m6r886-mevIHp/view?usp=drive_link",
-  B: "PASTE_GOOGLE_DRIVE_LINK_B"
+const files = {
+  A: "https://drive.google.com/uc?export=download&id=FILE_ID_A",
+  B: "https://drive.google.com/uc?export=download&id=FILE_ID_B",
+  C: "https://drive.google.com/uc?export=download&id=FILE_ID_C"
 };
 
 const params = new URLSearchParams(window.location.search);
 const product = params.get("product");
 
-if(links[product]){
+if(files[product]){
   document.getElementById("link").innerHTML =
-    `<a href="${links[product]}" target="_blank">Download Now</a>`;
+    `<a href="${files[product]}">Download Now</a>`;
 }else{
-  document.getElementById("link").innerHTML = "Invalid Product";
+  document.getElementById("link").innerText = "Invalid product";
 }
 </script>
 
