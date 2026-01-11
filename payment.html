@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Payment</title>
+<title>Payment</title>
+<style>
+body{text-align:center;font-family:Arial;padding:40px}
+button{padding:12px 25px;font-size:16px}
+</style>
 </head>
-<body style="font-family:Arial;text-align:center;padding:40px">
+<body>
 
 <h2>bKash Payment</h2>
+<p>Send payment to:</p>
+<h3>01611039105</h3>
 
-<p>
-Send money to this number:
-<br><b>01611039105</b>
-</p>
+<p>Reference: Product</p>
 
-<p>
-Payment করার পর নিচের বাটনে ক্লিক করুন
-</p>
+<a id="next"><button>I Have Paid</button></a>
 
 <script>
-const params = new URLSearchParams(window.location.search);
-const product = params.get("product");
+const p=new URLSearchParams(location.search).get("product");
+document.getElementById("next").href="download.html?product="+p;
 </script>
-
-<button onclick="window.location.href='download.html?product=' + product">
-  I Have Paid – Download
-</button>
 
 </body>
 </html>
