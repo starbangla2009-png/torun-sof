@@ -1,45 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>bKash Payment</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{font-family:Arial;background:#f4f4f4;padding:20px}
-.box{background:#fff;padding:20px;border-radius:10px;max-width:400px;margin:auto}
-input,button{width:100%;padding:12px;margin-top:10px}
-button{background:#e2136e;color:white;border:none}
-</style>
+  <title>Payment</title>
 </head>
+<body style="font-family:Arial;text-align:center;padding:40px">
 
-<body>
-
-<div class="box">
 <h2>bKash Payment</h2>
-<p>Send Money to:</p>
-<h3>📱 01611039105</h3>
-<p>Amount: <b id="price"></b></p>
 
-<input type="text" id="trx" placeholder="Enter Transaction ID" required>
+<p>
+Send money to this number:
+<br><b>01611039105</b>
+</p>
 
-<button onclick="go()">Confirm Payment</button>
-</div>
+<p>
+Payment করার পর নিচের বাটনে ক্লিক করুন
+</p>
 
 <script>
 const params = new URLSearchParams(window.location.search);
 const product = params.get("product");
-const price = params.get("price");
-
-document.getElementById("price").innerText = "৳" + price;
-
-function go(){
-  const trx = document.getElementById("trx").value;
-  if(trx.length < 5){
-    alert("Valid Transaction ID দিন");
-    return;
-  }
-  window.location.href = "download.html?product="+product;
-}
 </script>
+
+<button onclick="window.location.href='download.html?product=' + product">
+  I Have Paid – Download
+</button>
 
 </body>
 </html>
